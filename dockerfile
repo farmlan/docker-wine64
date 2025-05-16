@@ -2,11 +2,30 @@ FROM almalinux:9
 
 # Configure dependancys and create build directorys
 RUN dnf groupinstall 'Development Tools' -y && \
-dnf install cmake gcc libX11-devel libXcursor-devel libXi-devel libXext-devel \
-libXrandr-devel libXinerama-devel freetype-devel fontconfig-devel libxml2-devel \
-libxslt-devel mesa-libGL-devel libpng-devel libjpeg-turbo-devel glib2-devel \
-libgcrypt-devel gnutls-devel wget glibc-devel.i686 libX11-devel.i686 \
-freetype-devel.i686 libxcb.i686 libXext-devel.i686 -y && \
+dnf install -y cmake \
+gcc \
+libX11-devel \
+libXcursor-devel \
+libXi-devel \ 
+libXext-devel \
+libXrandr-devel \
+libXinerama-devel \
+freetype-devel \
+fontconfig-devel \
+libxml2-devel \
+libxslt-devel \
+mesa-libGL-devel \
+libpng-devel \
+libjpeg-turbo-devel \
+glib2-devel \
+libgcrypt-devel \
+gnutls-devel \
+wget \
+glibc-devel.i686 \
+libX11-devel.i686 \
+freetype-devel.i686 \
+libxcb.i686 \
+libXext-devel.i686 && \
 mkdir wine-builds && cd wine-builds && \
 wget https://dl.winehq.org/wine/source/10.0/wine-10.0.tar.xz && \
 tar -xf wine-10.0.tar.xz && \

@@ -62,7 +62,7 @@ RUN dnf remove -y \
     make \
     pkgconf \
     pkgconf-m4 \
-    pkgconf-pkg-config \
+    pkgconf-pkg-config \.
     redhat-rpm-config \
     rpm-build \
     rpm-sign \
